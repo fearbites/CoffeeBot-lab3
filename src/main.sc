@@ -1,23 +1,18 @@
-require: slotfilling/slotFilling.sc
-  module = sys.zb-common
 theme: /
 
-    state: Start
+    state: CoffeShop
         q!: $regex</start>
-        a: Начнём.
+        intent: /привет || toState = "/Choose Coffees"
+        event: noMatch || toState = "/CoffeShop"
 
-    state: Hello
-        intent!: /привет
-        a: Привет привет
-
-    state: Bye
-        intent!: /пока
-        a: Пока пока
-
-    state: NoMatch
-        event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
-
-    state: Match
-        event!: match
-        a: {{$context.intent.answer}}
+    state: Choose Coffees
+        random: 
+        a: Рад вас видеть! У нас свежесваренный кофе. Хотите капучино, латте или эспрессо?
+        a: Добрый день! Готов помочь с выбором напитка. Какой кофе предпочитаете?
+        a: Привет! Что будем заказывать сегодня? У нас есть вкусный кофе: капучино, латте, эспрессо
+        a: Приветствую! Давайте выберем кофе. Вам капучино, латте или эспрессо?
+        a: Здравствуй! Какой кофе тебе приготовить? Есть капучино, латте и эспрессо.
+        a: Привет! Как насчёт чашечки ароматного кофе? Какой вид предпочитаете?
+        a: Привет! У нас сегодня отличный выбор кофейных напитков. Что будем пить?
+        intent: /Латте || toState = "./"
+        event: noMatch || toState = "./"

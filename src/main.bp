@@ -1,0 +1,21 @@
+{
+  "positions" : [ {
+    "id" : "/",
+    "x" : 17,
+    "y" : 12
+  }, {
+    "id" : "/CoffeShop",
+    "name" : "CoffeShop",
+    "x" : 288,
+    "y" : 601
+  }, {
+    "id" : "/default",
+    "x" : 368,
+    "y" : 12
+  }, {
+    "id" : "/Choose Coffees",
+    "name" : "Choose Coffees",
+    "x" : 774,
+    "y" : 300
+  } ]
+}
